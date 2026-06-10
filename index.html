@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page metadata used by search engines and social previews. -->
+  <title>Nicholas Callahan | Software Engineer & CS Graduate</title>
+  <meta name="description" content="Portfolio of Nicholas Callahan: recent B.S. Computer Science graduate from Eastern Michigan University with experience in software engineering, web automation, and AI.">
+  <meta name="author" content="Nicholas Callahan">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky top nav. Anchor links jump to sections; offset is handled by
+       html { scroll-padding-top: var(--nav-h) } in style.css. -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Nicholas Callahan, home">
+        Nicholas Callahan
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero. First impression: name, tagline, intro, primary CTA. -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero__eyebrow">Software Engineer • CS Graduate</p>
+        <h1>Hi, I'm Nicholas Callahan.</h1>
+        <p class="hero__tagline">
+          A recent B.S. Computer Science graduate from Eastern Michigan University
+          with hands-on experience in software engineering, web automation, and
+          artificial intelligence. I'm looking for a junior-level role or internship
+          where I can apply strong fundamentals in algorithms, data structures, and
+          programming languages to real-world problems.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About. Bio plus education block. -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>About</h2>
+          <p>A bit about my background and academics.</p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__bio">
+            <p>
+              I started studying computer science at Eastern Michigan University in
+              2022 and graduated in 2026 with a B.S. in Applied Computer Science
+              through the Honors College. My coursework and academic projects have
+              spanned algorithms, AI, operating systems, embedded devices, mobile,
+              and game development, and have included contributing to open-source
+              academic tooling for my Embedded AI course. I enjoy projects that
+              connect those areas to practical, working software.
+            </p>
+            <p>
+              Outside of class, I've built personal projects with Python and
+              Selenium, and held customer-facing roles that have taught me to
+              communicate clearly and keep things running smoothly under pressure.
+            </p>
+          </div>
+
+          <aside class="about__edu">
+            <h3>Eastern Michigan University</h3>
+            <p class="meta">B.S. Applied Computer Science • Ypsilanti, MI • 2022 – 2026</p>
+            <p><span class="tag">Honors College</span><span class="tag">Dean's List</span></p>
+
+            <h4 style="margin-top: var(--space-6);">Relevant Coursework</h4>
+            <p>
+              <span class="tag tag--neutral">Algorithms &amp; Data Structures</span>
+              <span class="tag tag--neutral">Programming Data Structures</span>
+              <span class="tag tag--neutral">Artificial Intelligence</span>
+              <span class="tag tag--neutral">Embedded AI</span>
+              <span class="tag tag--neutral">Software Engineering Solutions</span>
+              <span class="tag tag--neutral">Software Engineering Project</span>
+              <span class="tag tag--neutral">Operating Systems</span>
+              <span class="tag tag--neutral">Programming Languages</span>
+              <span class="tag tag--neutral">Computational Discrete Structures</span>
+              <span class="tag tag--neutral">Computer Organization</span>
+              <span class="tag tag--neutral">Internet-Based Computing</span>
+              <span class="tag tag--neutral">Mobile Development</span>
+              <span class="tag tag--neutral">Computer Game Programming</span>
+              <span class="tag tag--neutral">Statistical Methods</span>
+              <span class="tag tag--neutral">Calculus I</span>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills. Four groups of tag chips. -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Languages, tools, and concepts I've worked with.</p>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skills__group">
+            <h3>Languages</h3>
+            <p>
+              <span class="tag">Python</span><span class="tag">Java</span>
+              <span class="tag">HTML / CSS</span><span class="tag">C</span>
+              <span class="tag">C#</span><span class="tag">C++</span>
+              <span class="tag tag--neutral">JavaScript / TypeScript (exposure)</span>
+            </p>
+          </div>
+
+          <div class="skills__group">
+            <h3>Frameworks &amp; Tools</h3>
+            <p>
+              <span class="tag">Selenium WebDriver</span><span class="tag">Git / GitHub</span>
+              <span class="tag">Linux</span><span class="tag">REST APIs</span>
+              <span class="tag">Pytest</span>
+            </p>
+          </div>
+
+          <div class="skills__group">
+            <h3>Environments</h3>
+            <p>
+              <span class="tag tag--neutral">PyCharm</span><span class="tag tag--neutral">Eclipse</span>
+              <span class="tag tag--neutral">Visual Studio</span><span class="tag tag--neutral">BlueJ</span>
+              <span class="tag tag--neutral">Android Studio</span><span class="tag tag--neutral">Git Bash</span>
+              <span class="tag tag--neutral">VirtualBox</span><span class="tag tag--neutral">DOSBox</span>
+              <span class="tag tag--neutral">Arduino IDE</span><span class="tag tag--neutral">Postman</span>
+              <span class="tag tag--neutral">Microsoft Office</span><span class="tag tag--neutral">Google Workspace</span>
+            </p>
+          </div>
+
+          <div class="skills__group">
+            <h3>Concepts</h3>
+            <p>
+              <span class="tag">Data Structures &amp; Algorithms</span>
+              <span class="tag">Artificial Intelligence</span>
+              <span class="tag">OOP</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">Computer Architecture</span>
+              <span class="tag">Web Development</span>
+              <span class="tag">Embedded Devices</span>
+              <span class="tag">Android Development</span>
+              <span class="tag">Unity Development</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects. Three cards link to their detail pages. -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>A selection of academic and personal projects. Click any card for a full case study.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <article class="card">
+            <div class="card__media" aria-hidden="true">Connect 4 AI</div>
+            <div class="card__body">
+              <h3>Connect 4 AI</h3>
+              <p>Java game engine with Min-Max and Monte Carlo Tree Search opponents, plus a simulation framework that pits them against each other.</p>
+              <div class="card__tags">
+                <span class="tag">Java</span><span class="tag">AI</span><span class="tag">OOP</span>
+              </div>
+              <a class="card__link" href="projects/connect4-ai.html">View details &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media" aria-hidden="true">nn_dataflow Tools</div>
+            <div class="card__body">
+              <h3>nn_dataflow Tools</h3>
+              <p>Visualization scripts and a full MobileNetV2 layer definition added to an open-source neural-network dataflow scheduling tool.</p>
+              <div class="card__tags">
+                <span class="tag">Python</span><span class="tag">Matplotlib</span><span class="tag">Embedded AI</span>
+              </div>
+              <a class="card__link" href="projects/nn-dataflow.html">View details &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media" aria-hidden="true">Bandcamp Auto-Checkout</div>
+            <div class="card__body">
+              <h3>Bandcamp Auto-Checkout</h3>
+              <p>Selenium-driven web automation tool that monitors Bandcamp product pages and races to checkout on limited-release drops.</p>
+              <div class="card__tags">
+                <span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Web Automation</span>
+              </div>
+              <a class="card__link" href="projects/bandcamp-checkout.html">View details &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects__footer">
+          <a class="btn btn--secondary" href="projects.html">View all projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience. Work history. -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <p>Customer-facing roles that have built communication, reliability, and ownership.</p>
+        </div>
+
+        <ul class="experience__list">
+          <li class="exp-item">
+            <div class="exp-item__head">
+              <span class="exp-item__role">Lowe's, Indoor Garden Sales Associate</span>
+              <span class="exp-item__dates">2023 – Present</span>
+            </div>
+            <p class="exp-item__meta">Howell, MI</p>
+            <ul>
+              <li>Assist customers in selecting power equipment, tools, and plants; use store computer and phone systems to locate products and assist with checkout.</li>
+              <li>Operate specialized power equipment for stocking and merchandising while maintaining safety standards.</li>
+            </ul>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-item__head">
+              <span class="exp-item__role">Levi Strauss &amp; Co., Stylist</span>
+              <span class="exp-item__dates">2022 – 2023</span>
+            </div>
+            <p class="exp-item__meta">Howell, MI</p>
+            <ul>
+              <li>Managed point-of-sale transactions and delivered a smooth customer checkout experience.</li>
+              <li>Conducted inventory management, including restocking and fulfilling online orders.</li>
+            </ul>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-item__head">
+              <span class="exp-item__role">Clothes Mentor, Online Sales Associate</span>
+              <span class="exp-item__dates">2022</span>
+            </div>
+            <p class="exp-item__meta">Novi, MI</p>
+            <ul>
+              <li>Managed the e-commerce storefront using Shopify, posting products and promoting via Instagram and Facebook.</li>
+              <li>Handled order fulfillment and shipping logistics; supported overall online store operations.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Honors & Involvement. -->
+    <section id="honors" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Honors &amp; Involvement</h2>
+        </div>
+
+        <ul class="honors__list">
+          <li class="exp-item">
+            <div class="exp-item__head">
+              <span class="exp-item__role">EMU Honors College</span>
+              <span class="exp-item__dates">2022 – 2026</span>
+            </div>
+            <p>Maintaining academic distinction while completing enriched coursework; earned Dean's List recognition.</p>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-item__head">
+              <span class="exp-item__role">Community Service, Livingston County Recycle Center</span>
+              <span class="exp-item__dates">2026</span>
+            </div>
+            <p>Regularly volunteered with the organization as part of the Honors College civic engagement program.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact. -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p class="contact__avail">Available for internships and junior-level software roles. Feel free to reach out!</p>
+        </div>
+
+        <ul class="contact__list">
+          <li>
+            <a class="icon-link" href="mailto:nickcallahan2003@gmail.com">
+              <!-- Inline SVG so the icon takes on currentColor for hover states. -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+              </svg>
+              nickcallahan2003@gmail.com
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="tel:+18108521944">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92V21a1 1 0 0 1-1.09 1A19.86 19.86 0 0 1 2 4.09 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75c.13.65.32 1.28.57 1.88a1 1 0 0 1-.23 1.06L7 8.09a16 16 0 0 0 8.91 8.91l1.4-1.4a1 1 0 0 1 1.06-.23c.6.25 1.23.44 1.88.57a1 1 0 0 1 .75 1z"/>
+              </svg>
+              810.852.1944
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://github.com/ncallahan52" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://www.linkedin.com/in/nick-callahan-41a5b3335/" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nicholas Callahan. Built with HTML &amp; CSS. <a href="#top">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

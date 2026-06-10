@@ -1,0 +1,445 @@
+/* =============================================================================
+   style.css — Global styles for Nicholas Callahan's portfolio site.
+
+   Section order (top to bottom):
+     1.  Design tokens (:root custom properties)
+     2.  Minimal reset
+     3.  Base typography
+     4.  Layout helpers (.container, .section, .section-header)
+     5.  Components (.btn, .tag, .card, .nav, .icon-link)
+     6.  Section styles (hero, about, skills, projects, experience, honors,
+         contact, footer)
+     7.  Responsive breakpoints (mobile-first; one breakpoint at 720px)
+   ============================================================================= */
+
+
+/* 1. Design tokens ----------------------------------------------------------- */
+:root {
+  /* Color palette — light warm neutral with orange accents. */
+  --bg: #FAFAF7;          /* page background */
+  --surface: #FFFFFF;     /* raised surfaces: cards, nav */
+  --text: #1F2937;        /* primary text */
+  --muted: #6B7280;       /* secondary text, captions */
+  --border: #E5E7EB;      /* hairline dividers */
+  --accent: #E85D04;      /* primary accent (links, buttons) */
+  --accent-hover: #C44A03;/* darker accent for hover/active states */
+  --accent-soft: #FFE9D6; /* tinted background for accent chips */
+  --focus: #FDB07A;       /* focus outline — meets contrast against bg */
+
+  /* Spacing scale (4 px base, doubles up smoothly). */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Typography — system font stack: zero network cost, native look on any OS. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale. */
+  --fs-xs: 0.8125rem;     /* 13px */
+  --fs-sm: 0.9375rem;     /* 15px */
+  --fs-base: 1rem;        /* 16px */
+  --fs-lg: 1.125rem;      /* 18px */
+  --fs-xl: 1.5rem;        /* 24px */
+  --fs-2xl: 2rem;         /* 32px */
+  --fs-3xl: 2.75rem;      /* 44px */
+
+  /* Layout. */
+  --container-max: 1100px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-md: 0 4px 14px rgba(17, 24, 39, 0.06);
+
+  /* Nav height — also used as scroll-padding so anchor jumps clear the nav. */
+  --nav-h: 64px;
+}
+
+
+/* 2. Minimal reset ----------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h); /* keep anchored sections below sticky nav */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--accent-hover); text-decoration: underline; }
+
+/* Accessible focus ring — visible on keyboard nav, hidden for mouse clicks. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+
+/* 3. Base typography --------------------------------------------------------- */
+h1, h2, h3, h4 {
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0 0 var(--space-4);
+  font-weight: 700;
+}
+h1 { font-size: var(--fs-3xl); letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-2xl); letter-spacing: -0.01em; }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+
+p { margin: 0 0 var(--space-4); }
+
+/* The orange underline beneath section titles — repeated visual motif. */
+.section-header {
+  margin-bottom: var(--space-8);
+}
+.section-header h2 {
+  display: inline-block;
+  padding-bottom: var(--space-2);
+  border-bottom: 3px solid var(--accent);
+  margin-bottom: var(--space-3);
+}
+/* Section-header descriptor: no fixed width, let the container handle wrap. */
+.section-header p {
+  color: var(--muted);
+  margin: 0;
+}
+
+
+/* 4. Layout helpers ---------------------------------------------------------- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section {
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--border); /* subtle separator between sections */
+}
+.section:last-of-type { border-bottom: none; }
+
+
+/* 5. Components -------------------------------------------------------------- */
+
+/* Buttons — primary (filled accent) and secondary (outlined). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease,
+              border-color 120ms ease, transform 120ms ease;
+}
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  background: var(--accent-hover);
+  color: #fff;
+  text-decoration: none;
+}
+.btn--secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn--secondary:hover, .btn--secondary:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+/* Tag chips — used for skills, project tech stacks, coursework. */
+.tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  margin: 0 var(--space-1) var(--space-1) 0;
+  font-size: var(--fs-xs);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+  border-radius: 999px;
+  font-weight: 500;
+}
+.tag--neutral {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+/* Card — projects, experience entries, etc. */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 160ms ease, transform 160ms ease,
+              border-color 160ms ease;
+}
+.card:hover, .card:focus-within {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.card__media {
+  aspect-ratio: 16 / 9;
+  background: var(--accent-soft); /* placeholder color when image missing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+.card__media img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.card__body { padding: var(--space-6); flex: 1; display: flex; flex-direction: column; }
+.card__body h3 { margin-bottom: var(--space-2); }
+.card__body p { color: var(--muted); font-size: var(--fs-sm); }
+.card__tags { margin: var(--space-3) 0 var(--space-4); }
+.card__link {
+  margin-top: auto;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+/* Sticky top nav — collapses to hamburger below 720px. */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 247, 0.92);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--border);
+  height: var(--nav-h);
+}
+.nav__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+.nav__brand {
+  font-weight: 700;
+  color: var(--text);
+  font-size: var(--fs-lg);
+}
+.nav__brand:hover { color: var(--text); text-decoration: none; }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav__links a {
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.nav__links a:hover, .nav__links a.is-active {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+.nav__toggle {
+  display: none;          /* visible only on mobile via media query */
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  cursor: pointer;
+}
+.nav__toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text);
+  margin: 4px 0;
+}
+
+/* Inline SVG icon link (GitHub, email, etc.). */
+.icon-link {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  color: var(--text);
+  font-weight: 500;
+}
+.icon-link svg { width: 20px; height: 20px; }
+.icon-link:hover { color: var(--accent-hover); text-decoration: none; }
+
+
+/* 6. Section styles ---------------------------------------------------------- */
+
+/* Hero — top of the home page. */
+.hero {
+  padding: var(--space-24) 0 var(--space-16);
+}
+.hero__eyebrow {
+  color: var(--accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-3);
+}
+.hero h1 { margin-bottom: var(--space-4); }
+.hero__tagline {
+  font-size: var(--fs-lg);
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: var(--space-8);
+}
+.hero__ctas {
+  display: flex; flex-wrap: wrap; gap: var(--space-3);
+}
+
+/* About — bio + education stacked on mobile, two columns on desktop. */
+.about__grid {
+  display: grid;
+  gap: var(--space-12);
+  grid-template-columns: 1fr;
+}
+.about__edu h3 { margin-bottom: var(--space-1); }
+.about__edu .meta { color: var(--muted); font-size: var(--fs-sm); margin-bottom: var(--space-4); }
+
+/* Skills — four labeled groups. */
+.skills__grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+.skills__group h3 {
+  font-size: var(--fs-base);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: var(--space-3);
+}
+
+/* Projects grid — Featured Projects on home, and the full grid on projects.html. */
+.projects__grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+.projects__footer {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+/* Experience — vertical timeline-style entries. */
+.experience__list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: var(--space-6);
+}
+.exp-item {
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent); /* accent stripe on left edge */
+  border-radius: var(--radius-md);
+}
+.exp-item__head {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+.exp-item__role { font-weight: 700; }
+.exp-item__dates { color: var(--muted); font-size: var(--fs-sm); }
+.exp-item__meta { color: var(--muted); font-size: var(--fs-sm); margin-bottom: var(--space-3); }
+.exp-item ul { margin: 0; padding-left: var(--space-6); }
+.exp-item li { margin-bottom: var(--space-2); }
+
+/* Honors & Involvement — same look as experience entries. */
+.honors__list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-6); }
+
+/* Contact. */
+.contact__avail {
+  color: var(--muted);
+  margin-bottom: var(--space-6);
+}
+.contact__list {
+  display: flex; flex-wrap: wrap; gap: var(--space-6);
+  list-style: none; margin: 0; padding: 0;
+}
+
+/* Footer. */
+.footer {
+  padding: var(--space-8) 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  border-top: 1px solid var(--border);
+}
+.footer a { color: var(--muted); }
+.footer a:hover { color: var(--accent-hover); }
+
+
+/* 7. Responsive breakpoints -------------------------------------------------- */
+
+/* Tablet / desktop: 720px and up. */
+@media (min-width: 720px) {
+  .hero h1 { font-size: var(--fs-3xl); }
+
+  .about__grid       { grid-template-columns: 1.4fr 1fr; }
+  .skills__grid      { grid-template-columns: repeat(2, 1fr); }
+  .projects__grid    { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Wider desktop: 1000px and up — projects shift to 3-up. */
+@media (min-width: 1000px) {
+  .projects__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Mobile: hide nav links, show hamburger. JS toggles .is-open on .nav__links. */
+@media (max-width: 719px) {
+  .nav__toggle { display: block; }
+  .nav__links {
+    position: absolute;
+    top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-3) var(--space-6);
+    display: none;
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__links li { padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+  .nav__links li:last-child { border-bottom: none; }
+
+  .hero h1 { font-size: var(--fs-2xl); }
+  .hero { padding: var(--space-16) 0 var(--space-12); }
+  .section { padding: var(--space-12) 0; }
+}

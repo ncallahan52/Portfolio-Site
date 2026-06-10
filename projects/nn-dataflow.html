@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>nn_dataflow Tools | Nicholas Callahan</title>
+  <meta name="description" content="Case study: extending the open-source nn_dataflow scheduling tool with Matplotlib visualizations and a full MobileNetV2 layer definition.">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Nicholas Callahan, home">
+        Nicholas Callahan
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-header">
+      <div class="container">
+        <p class="project-header__eyebrow">Final Project • COSC 480 Embedded AI • Winter 2026</p>
+        <h1>nn_dataflow Tools</h1>
+        <p class="project-header__meta">
+          Extended an open-source neural-network dataflow scheduling tool with
+          per-layer visualization scripts and a full MobileNetV2 architecture definition.
+        </p>
+
+        <p>
+          <span class="tag">Python</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">MobileNetV2</span>
+          <span class="tag">Embedded AI</span>
+          <span class="tag">Tangram</span>
+        </p>
+
+        <div class="project-header__links">
+          <a class="btn btn--secondary" href="https://github.com/rpiza12/nn_dataflow/tree/master/nn_dataflow/visualization" target="_blank" rel="noopener">GitHub branch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="project-hero-media">
+        <span>Visualization output coming soon</span>
+        <!--
+          When ready:
+            <img src="../assets/images/projects/nn-dataflow/energy-per-layer.png"
+                 alt="Energy per layer chart for MobileNetV2">
+        -->
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="prose">
+
+        <h2>Overview</h2>
+        <p>
+          For my Embedded AI final project, I extended <code>nn_dataflow</code>, an
+          academic dataflow-scheduling tool for neural-network accelerators, so that
+          it could (a) target a modern mobile-optimized network and (b) communicate
+          its scheduling decisions visually instead of as raw JSON. The
+          visualization scripts produce per-layer energy, latency, and cost
+          breakdowns that make it much easier to reason about trade-offs.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Implemented Python visualization scripts that parse JSON search results from the scheduler and generate per-layer energy, latency, and cost breakdowns using Matplotlib.</li>
+          <li>Defined a full MobileNetV2 architecture within the existing layer API, enabling dataflow scheduling on a mobile-optimized network that the tool didn't previously support.</li>
+          <li>Validated the new network definition against the original MobileNetV2 paper's published layer dimensions and verified correctness through the project's built-in test suite.</li>
+        </ul>
+
+        <h2>Results &amp; Learnings</h2>
+        <ul>
+          <li>Reading and extending a research codebase taught me to map an unfamiliar architecture quickly: find the entry points, follow the data, then add capability without disturbing existing tests.</li>
+          <li>Producing readable charts from raw JSON made the tool noticeably more useful for the rest of the class. Visualization is a force multiplier on any analysis tool.</li>
+        </ul>
+
+      </article>
+    </section>
+
+    <section class="container" style="margin-top: var(--space-12);">
+      <h2>Media</h2>
+      <div class="gallery">
+        <div class="gallery__item">Per-layer energy chart coming soon</div>
+        <div class="gallery__item">Per-layer latency chart coming soon</div>
+      </div>
+    </section>
+
+    <section class="container">
+      <a class="project-back" href="../projects.html">&larr; Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nicholas Callahan. <a href="../index.html">Home</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bandcamp Auto-Checkout | Nicholas Callahan</title>
+  <meta name="description" content="Case study: Python + Selenium web automation tool that monitors Bandcamp product pages and executes rapid auto-checkout on limited-release drops.">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Nicholas Callahan, home">
+        Nicholas Callahan
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-header">
+      <div class="container">
+        <p class="project-header__eyebrow">Personal Project</p>
+        <h1>Bandcamp Auto-Checkout</h1>
+        <p class="project-header__meta">
+          A Python + Selenium web automation tool that monitors Bandcamp product pages
+          and executes a rapid checkout on limited-release vinyl and merchandise drops.
+        </p>
+
+        <p>
+          <span class="tag">Python</span>
+          <span class="tag">Selenium WebDriver</span>
+          <span class="tag">Web Automation</span>
+          <span class="tag">Pytest</span>
+        </p>
+
+        <div class="project-header__links">
+          <a class="btn btn--secondary" href="#" target="_blank" rel="noopener">GitHub repo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="project-hero-media">
+        <span>Demo video coming soon</span>
+        <!--
+          When ready, swap in a demo video:
+            <video src="../assets/videos/projects/bandcamp-checkout/demo.mp4"
+                   poster="../assets/images/projects/bandcamp-checkout/hero.jpg"
+                   controls preload="metadata"></video>
+        -->
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="prose">
+
+        <h2>Overview</h2>
+        <p>
+          Limited-release Bandcamp drops sell out in seconds. This personal project
+          is a focused automation tool: it watches a product page, waits for the
+          "buy" path to become reachable, and runs a fast, deterministic checkout
+          flow, built so a human can keep an eye on it but doesn't have to fight
+          the clock.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Built a web-automation tool with Python and Selenium WebDriver that monitors Bandcamp product pages and executes rapid auto-checkout for limited-release vinyl and merchandise drops.</li>
+          <li>Implemented configurable wait logic, DOM element targeting, and automated form-fill for a seamless end-to-end purchase flow.</li>
+          <li>Designed retry mechanisms and error handling to deal with dynamic page loads, transient failures, and rate-limiting.</li>
+        </ul>
+
+        <h2>Results &amp; Learnings</h2>
+        <ul>
+          <li>Real DOMs are messier than the textbook examples; explicit waits and resilient selectors matter more than clever code.</li>
+          <li>Solid logging and config separation turned this from a one-off script into something I can re-point at a new product page in minutes.</li>
+        </ul>
+
+      </article>
+    </section>
+
+    <section class="container" style="margin-top: var(--space-12);">
+      <h2>Media</h2>
+      <div class="gallery">
+        <div class="gallery__item">Demo recording coming soon</div>
+        <div class="gallery__item">Config / log screenshot coming soon</div>
+      </div>
+    </section>
+
+    <section class="container">
+      <a class="project-back" href="../projects.html">&larr; Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nicholas Callahan. <a href="../index.html">Home</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

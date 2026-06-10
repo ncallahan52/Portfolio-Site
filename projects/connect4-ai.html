@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Connect 4 AI | Nicholas Callahan</title>
+  <meta name="description" content="Case study of a Connect 4 game engine in Java with Min-Max and Monte Carlo Tree Search AI opponents, including a simulation harness.">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="../index.html" aria-label="Nicholas Callahan, home">
+        Nicholas Callahan
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../projects.html" class="is-active">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Case-study header. -->
+    <section class="project-header">
+      <div class="container">
+        <p class="project-header__eyebrow">Honors Contract Project • COSC 461 • Winter 2026</p>
+        <h1>Connect 4 AI</h1>
+        <p class="project-header__meta">
+          Java game engine with two AI opponents (Min-Max and Monte Carlo Tree Search),
+          plus a simulation harness for head-to-head analysis.
+        </p>
+
+        <p>
+          <span class="tag">Java</span>
+          <span class="tag">Min-Max</span>
+          <span class="tag">Monte Carlo Tree Search</span>
+          <span class="tag">OOP</span>
+          <span class="tag">JUnit</span>
+        </p>
+
+        <div class="project-header__links">
+          <!-- TODO: replace # with the real GitHub URL when published. -->
+          <a class="btn btn--secondary" href="#" target="_blank" rel="noopener">GitHub repo</a>
+          <a class="btn btn--secondary" href="#" target="_blank" rel="noopener">Project paper</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero media (swap the placeholder for an <img> or <video> when ready). -->
+    <section class="container">
+      <div class="project-hero-media">
+        <span>Demo screenshot or video coming soon</span>
+        <!--
+          When ready, replace the span above with one of:
+            <img src="../assets/images/projects/connect4-ai/hero.jpg" alt="Connect 4 AI game board screenshot">
+            <video src="../assets/videos/projects/connect4-ai/demo.mp4"
+                   poster="../assets/images/projects/connect4-ai/hero.jpg"
+                   controls preload="metadata"></video>
+        -->
+      </div>
+    </section>
+
+    <!-- Prose write-up. -->
+    <section class="container">
+      <article class="prose">
+
+        <h2>Overview</h2>
+        <p>
+          Built as an Honors Contract for EMU's Introduction to Artificial Intelligence
+          course, this project explores how two classical adversarial-search algorithms,
+          Min-Max with alpha-beta pruning and Monte Carlo Tree Search (MCTS), perform
+          on the same game under matched conditions. The result is a working Connect 4
+          engine, two interchangeable AI opponents, and a simulation harness that runs
+          hundreds of games between them to surface meaningful win-rate trends.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Developed a Connect 4 game engine in Java with clean OOP separation between board state, move generation, rules, and player agents, making algorithms swappable behind a shared <code>Player</code> interface.</li>
+          <li>Implemented Min-Max with alpha-beta pruning and a Monte Carlo Tree Search agent (selection, expansion, simulation, backpropagation) as the two AI opponents.</li>
+          <li>Built a simulation framework to pit the algorithms against each other over hundreds of games, varying depth/iteration budgets to analyze win-rate trends.</li>
+          <li>Wrote unit tests to validate move generation, terminal-state detection, and AI behavior under constrained budgets.</li>
+        </ul>
+
+        <h2>Results &amp; Learnings</h2>
+        <ul>
+          <li>Authored an accompanying paper documenting algorithm performance, implementation challenges, and a comparative analysis of search strategies under fixed compute budgets.</li>
+          <li>Reinforced how the right design pattern (strategy + clean interfaces) makes swapping search algorithms a one-line change rather than a rewrite.</li>
+          <li>Gave me hands-on intuition for when MCTS's randomized rollouts catch up to (and overtake) Min-Max as game complexity grows.</li>
+        </ul>
+
+      </article>
+    </section>
+
+    <!-- Media gallery. -->
+    <section class="container" style="margin-top: var(--space-12);">
+      <h2>Media</h2>
+      <div class="gallery">
+        <div class="gallery__item">Screenshot 1 coming soon</div>
+        <div class="gallery__item">Screenshot 2 coming soon</div>
+        <!--
+          Add more .gallery__item blocks as media becomes available, e.g.:
+            <div class="gallery__item">
+              <img src="../assets/images/projects/connect4-ai/board.jpg" alt="Mid-game board">
+            </div>
+        -->
+      </div>
+    </section>
+
+    <section class="container">
+      <a class="project-back" href="../projects.html">&larr; Back to all projects</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Nicholas Callahan. <a href="../index.html">Home</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
