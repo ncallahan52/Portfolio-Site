@@ -49,6 +49,7 @@
 }
 .prose h2 { margin-top: var(--space-12); }
 .prose h3 { margin-top: var(--space-8); }
+.prose > :first-child { margin-top: 0; }
 .prose ul { padding-left: var(--space-6); }
 .prose li { margin-bottom: var(--space-2); }
 
