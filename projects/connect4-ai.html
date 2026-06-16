@@ -35,7 +35,6 @@
 
   <main>
 
-    <!-- Case-study header. -->
     <section class="project-header">
       <div class="container">
         <p class="project-header__eyebrow">Honors Contract Project • COSC 461 • Winter 2026</p>
@@ -59,21 +58,6 @@
       </div>
     </section>
 
-    <!-- Hero media (swap the placeholder for an <img> or <video> when ready). -->
-    <section class="container">
-      <div class="project-hero-media">
-        <span>Demo screenshot or video coming soon</span>
-        <!--
-          When ready, replace the span above with one of:
-            <img src="../assets/images/projects/connect4-ai/hero.jpg" alt="Connect 4 AI game board screenshot">
-            <video src="../assets/videos/projects/connect4-ai/demo.mp4"
-                   poster="../assets/images/projects/connect4-ai/hero.jpg"
-                   controls preload="metadata"></video>
-        -->
-      </div>
-    </section>
-
-    <!-- Prose write-up. -->
     <section class="container">
       <article class="prose">
 
@@ -105,18 +89,33 @@
       </article>
     </section>
 
-    <!-- Media gallery. -->
     <section class="container" style="margin-top: var(--space-12);">
       <h2>Media</h2>
-      <div class="gallery">
-        <div class="gallery__item">Screenshot 1 coming soon</div>
-        <div class="gallery__item">Screenshot 2 coming soon</div>
-        <!--
-          Add more .gallery__item blocks as media becomes available, e.g.:
-            <div class="gallery__item">
-              <img src="../assets/images/projects/connect4-ai/board.jpg" alt="Mid-game board">
-            </div>
-        -->
+
+      <h3>AI vs. AI Simulation</h3>
+      <p>The simulation harness pits the two search algorithms against each other over many games and reports the resulting win-rate trends.</p>
+      <div class="gallery gallery--captioned">
+        <figure>
+          <img src="../assets/images/projects/connect4-ai/connect4_simulation_start.PNG" alt="Terminal output at the start of an AI versus AI simulation run">
+          <figcaption>Simulation start</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/projects/connect4-ai/connect4_simulation_finish.PNG" alt="Terminal output showing final win-rate results after the simulation completes">
+          <figcaption>Simulation finish</figcaption>
+        </figure>
+      </div>
+
+      <h3 style="margin-top: var(--space-8);">Playing Against an AI</h3>
+      <p>A human player can take on either AI opponent directly from the terminal.</p>
+      <div class="gallery gallery--captioned">
+        <figure>
+          <img src="../assets/images/projects/connect4-ai/connect4_play_start.PNG" alt="Terminal output at the start of a human versus AI game">
+          <figcaption>Game start</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/projects/connect4-ai/connect4_play_finish.PNG" alt="Terminal output at the end of a human versus AI game">
+          <figcaption>Game finish</figcaption>
+        </figure>
       </div>
     </section>
 
