@@ -374,6 +374,7 @@ p { margin: 0 0 var(--space-4); }
   gap: var(--space-2);
   margin-bottom: var(--space-1);
 }
+.exp-item__company { display: block; font-weight: 700; font-size: var(--fs-lg); margin-bottom: var(--space-1); }
 .exp-item__role { font-weight: 700; }
 .exp-item__dates { color: var(--muted); font-size: var(--fs-sm); }
 .exp-item__meta { color: var(--muted); font-size: var(--fs-sm); margin-bottom: var(--space-3); }
